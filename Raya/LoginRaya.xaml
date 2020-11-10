@@ -74,18 +74,19 @@
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,244" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://172.17.5.47/">
+      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,306" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="http://172.17.5.47/">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,205" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
               <Flowchart DisplayName="Raya app" sap:VirtualizedContainerService.HintSize="674,1013" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                 <Flowchart.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="RayaLoginExists" />
@@ -115,13 +116,10 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:UiElementExists DisplayName="Raya Login Exists" Exists="[RayaLoginExists]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                     <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="851e35ca-19d7-457c-94f6-baa84ab4101a" InformativeScreenshot="dd68e949f769b2d92d173569255e9923" Selector="&lt;html app='chrome.exe' title='Log in' /&gt;&lt;webctrl idx='2' parentid='loginForm' tag='DIV' /&gt;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="851e35ca-19d7-457c-94f6-baa84ab4101a" InformativeScreenshot="dd68e949f769b2d92d173569255e9923" Selector="&lt;html app='chrome.exe' title='Log in' /&gt;&lt;webctrl idx='2' parentid='loginForm' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
@@ -132,19 +130,19 @@
                           <av:Point x:Key="ShapeLocation">250,220</av:Point>
                           <av:Size x:Key="ShapeSize">111,87</av:Size>
                           <av:PointCollection x:Key="FalseConnector">361,263.5 540,263.5 540,241</av:PointCollection>
-                          <av:PointCollection x:Key="TrueConnector">250,263.5 140,263.5 140,299</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">250,263.5 220,263.5 220,199 100,199 100,229</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
                         <FlowStep x:Name="__ReferenceID8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">40,299</av:Point>
+                              <av:Point x:Key="ShapeLocation">0,229</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">140,350 140,399</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">100,280 100,310 170,310 170,369</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Flowchart DisplayName="Login To  Raya system" sap:VirtualizedContainerService.HintSize="634,716" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+                          <Flowchart DisplayName="Login To  Raya system" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_2">
                             <Flowchart.Variables>
                               <Variable x:TypeArguments="x:String" Name="RayaUsername" />
                               <Variable x:TypeArguments="x:String" Name="RayaPassword" />
@@ -152,75 +150,21 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+                                <av:Point x:Key="ShapeLocation">300,2.5</av:Point>
                                 <av:Size x:Key="ShapeSize">60,75</av:Size>
                                 <x:Double x:Key="Height">680</x:Double>
-                                <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 279.895,107.5 279.895,150</av:PointCollection>
+                                <av:PointCollection x:Key="ConnectorLocation">330,77.5 330,107.5 131,107.5 131,150</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <Flowchart.StartNode>
                               <x:Reference>__ReferenceID4</x:Reference>
                             </Flowchart.StartNode>
-                            <FlowStep x:Name="__ReferenceID1">
+                            <FlowStep x:Name="__ReferenceID0">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">180,349</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">280,400 280,409</av:PointCollection>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Raya Password'" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[RayaPassword]">
-                                <ui:TypeInto.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ac32664d-0797-4023-a4c0-217777bf463d" InformativeScreenshot="94f0230c2df0ebd89fee8a767bd4bb37" Selector="&lt;html app='chrome.exe' title='Log in' /&gt;&lt;webctrl tag='INPUT' type='password' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:TypeInto.Target>
-                              </ui:TypeInto>
-                              <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID0">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">180,409</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                    <ui:Click.CursorPosition>
-                                      <ui:CursorPosition Position="Center">
-                                        <ui:CursorPosition.OffsetX>
-                                          <InArgument x:TypeArguments="x:Int32" />
-                                        </ui:CursorPosition.OffsetX>
-                                        <ui:CursorPosition.OffsetY>
-                                          <InArgument x:TypeArguments="x:Int32" />
-                                        </ui:CursorPosition.OffsetY>
-                                      </ui:CursorPosition>
-                                    </ui:Click.CursorPosition>
-                                    <ui:Click.Target>
-                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a239da2a-aabb-4e71-95e7-00312cf33f6e" InformativeScreenshot="d94d7b9bcc0319fedc44bea008defcfe" Selector="&lt;html app='chrome.exe' title='Log in' /&gt;&lt;webctrl tag='INPUT' type='submit' /&gt;">
-                                        <ui:Target.TimeoutMS>
-                                          <InArgument x:TypeArguments="x:Int32" />
-                                        </ui:Target.TimeoutMS>
-                                        <ui:Target.WaitForReady>
-                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                        </ui:Target.WaitForReady>
-                                      </ui:Target>
-                                    </ui:Click.Target>
-                                  </ui:Click>
-                                </FlowStep>
-                              </FlowStep.Next>
-                            </FlowStep>
-                            <x:Reference>__ReferenceID0</x:Reference>
-                            <FlowStep x:Name="__ReferenceID3">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">180,239</av:Point>
+                                  <av:Point x:Key="ShapeLocation">10,259</av:Point>
                                   <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">280,261 280,279</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">110,281 110,311 100,311 100,334.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbce93alFrESjiis7H2DHigAAAAACAAAAAAADZgAAwAAAABAAAACHpkFE6rs9jAYXyECyQvaAAAAAAASAAACgAAAAEAAAAJmT6JtKv+G4rMg1kbcsYT0QAAAAfPphDMRVD8d7e0b0CsumhxQAAADLyDuRA93dKjAzckxXcH5q1h8ejQ==" Result="[RayaPassword]">
@@ -231,15 +175,15 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:GetPassword>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID2">
+                                <FlowStep x:Name="__ReferenceID3">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">180,279</av:Point>
+                                      <av:Point x:Key="ShapeLocation">0,334.5</av:Point>
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">280,330 280,349</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">100,385.5 100,404.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Raya UserName'" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[RayaUsername]">
+                                  <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'Raya UserName'" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[RayaUsername]">
                                     <ui:TypeInto.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7be1be60-2772-4eb6-ab1a-87594af51e5c" InformativeScreenshot="72ee53c1b1974678ad2d081d6429d1ab" Selector="&lt;html app='chrome.exe' title='Log in' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;">
                                         <ui:Target.TimeoutMS>
@@ -252,18 +196,69 @@
                                     </ui:TypeInto.Target>
                                   </ui:TypeInto>
                                   <FlowStep.Next>
-                                    <x:Reference>__ReferenceID1</x:Reference>
+                                    <FlowStep x:Name="__ReferenceID2">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">0,404.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">100,455.5 100,484.5</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'Raya Password'" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[RayaPassword]">
+                                        <ui:TypeInto.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ac32664d-0797-4023-a4c0-217777bf463d" InformativeScreenshot="94f0230c2df0ebd89fee8a767bd4bb37" Selector="&lt;html app='chrome.exe' title='Log in' /&gt;&lt;webctrl tag='INPUT' type='password' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:TypeInto.Target>
+                                      </ui:TypeInto>
+                                      <FlowStep.Next>
+                                        <FlowStep x:Name="__ReferenceID1">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">0,484.5</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a239da2a-aabb-4e71-95e7-00312cf33f6e" InformativeScreenshot="d94d7b9bcc0319fedc44bea008defcfe" Selector="&lt;html app='chrome.exe' title='Log in' /&gt;&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                        </FlowStep>
+                                      </FlowStep.Next>
+                                    </FlowStep>
                                   </FlowStep.Next>
                                 </FlowStep>
                               </FlowStep.Next>
                             </FlowStep>
-                            <x:Reference>__ReferenceID2</x:Reference>
                             <FlowStep x:Name="__ReferenceID4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">148.895,150</av:Point>
+                                  <av:Point x:Key="ShapeLocation">0,150</av:Point>
                                   <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">279.895,210 279.895,239 280,239</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">131,210 131,240 110,240 110,259</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -280,28 +275,28 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
                               <FlowStep.Next>
-                                <x:Reference>__ReferenceID3</x:Reference>
+                                <x:Reference>__ReferenceID0</x:Reference>
                               </FlowStep.Next>
                             </FlowStep>
+                            <x:Reference>__ReferenceID1</x:Reference>
+                            <x:Reference>__ReferenceID2</x:Reference>
+                            <x:Reference>__ReferenceID3</x:Reference>
                           </Flowchart>
                           <FlowStep.Next>
                             <FlowStep x:Name="__ReferenceID9">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">40,399</av:Point>
+                                  <av:Point x:Key="ShapeLocation">70,369</av:Point>
                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">140,450 140,480 293.5,480 293.5,500</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">170,420 170,450 293.5,450 293.5,500</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:UiElementExists DisplayName="Main PageExists" Exists="[MainPageExists]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                                 <ui:UiElementExists.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7df3d2d0-efa8-4f9c-8ea7-0582a5bafdae" InformativeScreenshot="954bf4dd4703439f50745d612d43a6f0" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' tag='DIV' /&gt;">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7df3d2d0-efa8-4f9c-8ea7-0582a5bafdae" InformativeScreenshot="954bf4dd4703439f50745d612d43a6f0" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
                                   </ui:Target>
                                 </ui:UiElementExists.Target>
                               </ui:UiElementExists>
